@@ -2,3 +2,5 @@ explained file ejs
  <h1>---it isa text and its the biggest one
  <a href="here is link">here is text for link---tag is forlinks
  <img src="link image" width= "">---link to photo
+
+ to start server we write------ npm run start
