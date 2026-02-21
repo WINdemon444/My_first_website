@@ -15,7 +15,7 @@ app.set("view engine", "ejs");
 app.get("/", (req, res) => {
   res.render("index");
 });
-app.get("/send",(req, res) => {
+app.get("/send", (req, res) => {
   res.render("send");
 });
 app.listen(PORT);

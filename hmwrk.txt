@@ -1,0 +1,13 @@
+HOMEWORK: My Top 5 Favorites
+
+<!-- Task:
+Create a numbered list of your 5 favorite games (or movies) on this page using HTML tags.
+
+Requirements:
+
+1. Use the <ol> tag to start a numbered list.
+2. Add 5 items using the <li> tag.
+3. Inside every item, you must include:
+* A Title (use <h3>).
+* An Image from the internet (use <img> with width="200").
+* A Link to the official website (use <a>). -->
