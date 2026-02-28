@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brawlers</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div style="position: sticky; top: 0; z-index: 1000; background: #fff;">
+        <%- include('partials/header') %>
+    </div>
+    
+    <div style="padding: 20px; max-width: 800px; margin: 0 auto;">
+      
+      <h1><span class="highlight-blue">Certain brawlers</span> </h1>
+        
+        <% brawlers.forEach(function(hero) { %>
+            <div style="background: white; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: flex; align-items: center;">
+                <img src="<%= hero.image %>" alt="<%= hero.name %>" width="100" style="margin-right: 20px;">
+                <div>
+                    <h2 style="margin-top: 0; color: #333;"><%= hero.name %></h2>
+                    <p style="margin: 5px 0;"><strong>class:</strong> <%= hero.class %></p>
+                    <p style="margin: 5px 0;"><strong>rarity:</strong> <span style="color: #e1b12c;"><%= hero.rarity %></span></p>
+                    <p style="margin: 5px 0; color: #666;"><%= hero.description %></p>
+                </div>
+            </div>
+        <% }); %>
+
+    </div>
+    <a href="/">
+      <button style="background-color: rgb(255, 255, 255)">Back to home</button>
+    </a>
+  </body>
+</html>
