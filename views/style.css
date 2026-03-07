@@ -1,79 +1,157 @@
 /* Оновлений стиль для фону сторінки */
 body {
-    font-family: 'Arial Black', Impact, sans-serif;
-    background-color: #3b3b98; /* Темно-синій базовий колір (якщо картинка не завантажиться) */
-    
-    /* Додаємо фонове зображення */
-    background-image: url('https://i.redd.it/all-loading-screens-coming-in-this-update-v0-m7si1wq0yh5c1.jpg?width=1848&format=pjpg&auto=webp&s=2a96caf48f5865967c213198067701953d6e002a'); 
-    
-    /* Налаштування для того, щоб фон повторювався і заповнював весь екран */
-    background-repeat: repeat; 
-    background-position: center;
-    
-    margin: 0;
-    color: #2f3542;
+  font-family: "Arial Black", Impact, sans-serif;
+  background-color: #3b3b98; /* Темно-синій базовий колір (якщо картинка не завантажиться) */
+
+  /* Додаємо фонове зображення */
+  background-image: url("https://i.redd.it/all-loading-screens-coming-in-this-update-v0-m7si1wq0yh5c1.jpg?width=1848&format=pjpg&auto=webp&s=2a96caf48f5865967c213198067701953d6e002a");
+
+  /* Налаштування для того, щоб фон повторювався і заповнював весь екран */
+  background-repeat: repeat;
+  background-position: center;
+
+  margin: 0;
+  color: #2f3542;
 }
 
 /* Стиль шапки сайту (кольори меню гри) */
 header {
-    background-color: #000000; /* Синій */
-    padding: 15px 20px;
-    border-bottom: 5px solid #000000;
-    display: flex;
-    align-items: center;
+  background-color: #000000; /* Синій */
+  padding: 15px 20px;
+  border-bottom: 5px solid #000000;
+  display: flex;
+  align-items: center;
 }
 
 header h2 {
-    margin: 0;
-    color: #fbc531; /* Жовтий текст */
-    text-shadow: 2px 2px 0 #000; /* Чорна обводка для мультяшності */
-    margin-right: 30px;
-    letter-spacing: 1px;
+  margin: 0;
+  color: #fbc531; /* Жовтий текст */
+  text-shadow: 2px 2px 0 #000; /* Чорна обводка для мультяшності */
+  margin-right: 30px;
+  letter-spacing: 1px;
 }
 
 header a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    margin-right: 15px;
-    text-shadow: 1px 1px 0 #000;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 15px;
+  text-shadow: 1px 1px 0 #000;
 }
 
 header a:hover {
-    color: #fbc531;
+  color: #fbc531;
 }
 
 /* Спільний контейнер для центрування контенту */
 .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
 }
 
 /* Картка Бравлера з товстими рамками */
 .brawler-card {
-    background: white;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 15px;
-    border: 4px solid #000000; 
-    box-shadow: 5px 5px 0 #000000; /* Жорстка тінь */
-    display: flex;
-    align-items: center;
+  background: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  border: 4px solid #000000;
+  box-shadow: 5px 5px 0 #000000; /* Жорстка тінь */
+  display: flex;
+  align-items: center;
 }
 
 .brawler-card img {
-    border-radius: 10px;
-    border: 3px solid #2f3542;
-    margin-right: 20px;
+  border-radius: 10px;
+  border: 3px solid #2f3542;
+  margin-right: 20px;
 }
 
 .brawler-card h2 {
-    margin-top: 0;
-    color: #c23616; /* Червоний заголовок */
-    text-transform: uppercase;
+  margin-top: 0;
+  color: #c23616; /* Червоний заголовок */
+  text-transform: uppercase;
 }
 .highlight-blue {
-    color: #1e3799;
-    text-shadow: 2px 2px 0px #fff;
+  color: #1e3799d0;
+  text-shadow: 2px 2px 0px #fff;
+}
+/* Базовий фон сторінки. Переконайся, що завантажив картинку в папку public/images/ */
+body {
+  font-family: "Arial Black", Impact, sans-serif;
+  background-color: #1a1a2e; /* Темний колір на випадок, якщо картинка не завантажиться */
+  background-image: url("https://preview.redd.it/free-brawl-stars-background-for-anybody-who-wants-to-make-v0-iapqmzd3zu721.jpg?width=640&crop=smart&auto=webp&s=8ea01387608fc282b5c562f40a8d56e3ba0f77e4");
+  background-attachment: fixed; /* Фон стоїть на місці при прокрутці */
+  background-size: cover;
+  margin: 0;
+}
+
+/* Центральний блок, щоб текст не зливався зі строкатим фоном */
+.main-content-box {
+  background-color: rgba(255, 255, 255, 0.95); /* Білий, трохи прозорий фон */
+  border: 5px solid #273c75; /* Товста синя рамка */
+  border-radius: 20px;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 40px auto; /* Центруємо по екрану */
+  text-align: center;
+  box-shadow: 8px 8px 0px #192a56; /* Жорстка тінь для 3D-ефекту */
+}
+
+/* Стиль яскравого заголовка */
+.main-content-box h1 {
+  color: #fbc531; /* Яскраво-жовтий */
+  text-transform: uppercase;
+  font-size: 45px;
+  margin-top: 0;
+  /* Створюємо ефект товстої обводки тексту */
+  text-shadow:
+    3px 3px 0px #c23616,
+    -2px -2px 0px #c23616,
+    2px -2px 0px #c23616,
+    -2px 2px 0px #c23616;
+  letter-spacing: 2px;
+}
+
+/* Стиль тексту опису */
+.main-content-box p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #2f3542;
+  font-family:
+    "Comic Sans MS", "Arial Rounded MT Bold", sans-serif; /* М'якший шрифт */
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Оформлення відео-плеєра */
+.video-container iframe {
+  border-radius: 15px;
+  border: 5px solid #273c75;
+  box-shadow: 5px 5px 0px #fbc531; /* Жовта тінь під відео */
+  max-width: 100%; /* Щоб плеєр не вилазив за краї на малих екранах */
+}
+/* Стилі ігрової кнопки */
+.brawl-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 40px;
+  background-color: #fbc531; /* Фірмовий жовтий колір */
+  color: #192a56; /* Темно-синій текст */
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 5px solid #192a56;
+  border-radius: 12px;
+  box-shadow: 6px 6px 0px #c23616; /* Червона тінь для контрасту */
+  transition: all 0.1s ease-in-out;
+}
+
+/* Ефект фізичного натискання */
+.brawl-btn:hover {
+  background-color: #ff1515;
+  transform: translate(4px, 4px); /* Візуальний зсув вниз і вправо */
+  box-shadow: 2px 2px 0px #c23616; /* Зменшення тіні */
 }

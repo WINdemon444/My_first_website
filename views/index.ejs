@@ -1,20 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BrawlWeb</title>
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <div style="position: sticky; top: 0; z-index: 1000; background: #fff;">
-        <%- include('partials/header') %>
+    <div style="position: sticky; top: 0; z-index: 1000; background: #fff">
+      <%- include('partials/header') %>
     </div>
     <h1>Hi , this is my website.</h1>
-    
-<a href="/brawlers">
-  <button style="background-color: rgb(9, 136, 227)">Brawlers</button>
-</a>
-</body>
-</html>
+    <div class="main-content-box">
+      <h1>Welcome to the Arena!</h1>
 
+      <p>
+        Brawl Stars is a fast-paced 3v3 multiplayer and battle royale game made
+        for mobile. Unlock and upgrade dozens of Brawlers with powerful super
+        abilities, star powers and gadgets!
+      </p>
+
+      <div class="video-container">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/CaryjOdYFa0"
+          title="Brawl Stars Video"
+          frameborder="0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+          "
+          allowfullscreen
+        ></iframe>
+      </div>
+      <a href="/brawlers" class="brawl-btn">Cool games ahead</a>
+    </div>
+  </body>
+</html>

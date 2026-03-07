@@ -16,20 +16,39 @@
       <h1><span class="highlight-blue">Certain brawlers</span> </h1>
         
         <% brawlers.forEach(function(hero) { %>
-            <div style="background: white; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: flex; align-items: center;">
+            <div style="background: white; padding: 15px; margin-bottom: 20px;border:5px solid #333; border-radius: 20px; box-shadow: 20 4px 8px rgba(0,0,0,0.1); display: flex; align-items: center;">
                 <img src="<%= hero.image %>" alt="<%= hero.name %>" width="100" style="margin-right: 20px;">
                 <div>
                     <h2 style="margin-top: 0; color: #333;"><%= hero.name %></h2>
                     <p style="margin: 5px 0;"><strong>class:</strong> <%= hero.class %></p>
-                    <p style="margin: 5px 0;"><strong>rarity:</strong> <span style="color: #e1b12c;"><%= hero.rarity %></span></p>
-                    <p style="margin: 5px 0; color: #666;"><%= hero.description %></p>
-                </div>
-            </div>
-        <% }); %>
+                    <p style="margin: 5px 0;"><strong>rarity:</strong> 
+                <% 
+                    // Створюємо змінну для стилю
+                    let rarityStyle = "color: #333;"; // Темний колір за замовчуванням
+                    
+                    // Перетворюємо текст на маленькі літери, щоб уникнути помилок (Epic = epic)
+                    let checkRarity = hero.rarity.toLowerCase(); 
 
-    </div>
-    <a href="/">
-      <button style="background-color: rgb(255, 255, 255)">Back to home</button>
-    </a>
+                    // Перевіряємо рідкісність і задаємо колір
+                    if (checkRarity === 'epic') {
+                        rarityStyle = "color: #9b59b6; font-weight: bold;"; // Фіолетовий
+                    } else if (checkRarity === 'legendary') {
+                        rarityStyle = "color: #f1c40f; font-weight: bold;"; // Жовтий
+                    } else if (checkRarity === 'ultra legendary') {
+                        // CSS-магія для райдужного тексту
+                        rarityStyle = "background-image: linear-gradient(to right, red, orange, yellow, green, blue, purple); -webkit-background-clip: text; color: transparent; font-weight: bold;";
+                    }
+                    %>
+                <span style="<%= rarityStyle %>"><%= hero.rarity %></span>
+            </p>
+          <p style="margin: 5px 0; color: #666;"><%= hero.description %></p>
+           </div>
+         </div>
+         <% }); %>
+
+        <a href="/">
+          <button class="brawl-btn">Back to home</button>
+        </a>
+      </div>
   </body>
 </html>
