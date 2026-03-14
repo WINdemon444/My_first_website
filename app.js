@@ -86,5 +86,9 @@ app.get("/brawlers", (req, res) => {
 
   res.render("brawlers", { brawlers: brawlmops });
 });
+// Маршрут для статичної сторінки Bibi
+app.get('/brawler/bibi', (req, res) => {
+    res.render('bibi'); 
+});
 app.listen(PORT);
 console.log(`Server is running on http://localhost:${PORT}`);
