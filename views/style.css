@@ -151,7 +151,7 @@ body {
 
 /* Ефект фізичного натискання */
 .brawl-btn:hover {
-  background-color: #ff1515;
+  background-color: #ffad15;
   transform: translate(4px, 4px); /* Візуальний зсув вниз і вправо */
-  box-shadow: 2px 2px 0px #c23616; /* Зменшення тіні */
+  box-shadow: 2px 2px 0px #ff0000; /* Зменшення тіні */
 }
