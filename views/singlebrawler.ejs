@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= hero.name %> - Brawl Stars Wiki</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <div class="container main-content-box">
+        <img src="<%= hero.image %>" alt="<%= hero.name %>" style="width: 150px; border-radius: 20px; border: 4px solid #333;">
+        <h1 style="color: #c23616;"><%= hero.name %></h1>
+        
+        <p><strong>Class:</strong> <%= hero.class %></p>
+        <p><strong>Rarity:</strong> <span style="font-weight: bold;"><%= hero.rarity %></span></p>
+        <p><strong>Weapon:</strong> <%= hero.weapon %></p>
+        <p><strong>Voice Line:</strong> <i style="color: #555; font-size: 18px;">"<%= hero.voiceline %>"</i></p>
+        <p><strong>Best Mode:</strong> 
+            <span style="background-color: #fbc531; color: #192a56; padding: 4px 10px; border-radius: 8px; font-weight: bold; border: 2px solid #192a56;">
+                <%= hero.bestgamemode %>
+            </span>
+        </p>
+        <div style="background: #f1f2f6; padding: 15px; border-radius: 10px; margin: 20px 0; border: 3px dashed #273c75;">
+            <p><%= hero.description %></p>
+        </div>
+
+        <% if(hero.videourl && hero.videourl !== "") { %>
+            <div style="margin-top: 20px; margin-bottom: 20px;">
+                <h3 style="color: #273c75;">Gameplay:</h3>
+                <iframe width="100%" height="315" 
+                        src="<%= hero.videourl %>" 
+                        title="<%= hero.name %> Gameplay" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen 
+                        style="border-radius: 10px; border: 4px solid #333; box-shadow: 4px 4px 0 #2f3542;">
+                </iframe>
+            </div>
+        <% } %>
+
+        <br>
+        <a href="/brawlers" class="brawl-btn" style="font-size: 16px; padding: 10px 20px;">Back to all brawlers</a>
+    </div>
+</body>
+</html>
